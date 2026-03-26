@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雙城投顧｜讓人放心的小額借貸公司，已創立 15 年</title>
+  <meta name="description" content="雙城投顧提供透明的線上借貸服務，全程線上申辦，費率公開清楚。借 5 萬月息 666 元。創立於 2011 年，深耕 15 年。">
+  <meta property="og:title" content="雙城投顧｜讓人放心的小額借貸公司">
+  <meta property="og:description" content="全程線上申辦，借 5 萬月息 666 元，最快 7 分鐘完成評估。">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23C9A08E'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #3A4F60;
+      --navy-dark: #2C3E4F;
+      --navy-light: #4A6275;
+      --copper: #C9A08E;
+      --copper-dark: #B08A78;
+      --copper-bg: #C9A08E;
+      --orange: #E8734A;
+      --orange-hover: #D4623C;
+      --line-green: #06C755;
+      --line-hover: #05B64D;
+      --text-dark: #2A2A2A;
+      --text-mid: #555;
+      --text-light: #888;
+      --white: #FFFFFF;
+      --off-white: #F8F6F3;
+      --border: #E8E2DC;
+      --radius: 12px;
+      --radius-lg: 16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-dark);
+      line-height: 1.7;
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* ─── Header ─── */
+    .header {
+      background: var(--navy);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .header .container {
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .header-left { display: flex; align-items: center; gap: 20px; }
+    .header-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .header-logo img { height: 40px; border-radius: 6px; }
+    .header-logo-text { color: var(--white); font-weight: 700; font-size: 1rem; letter-spacing: .04em; }
+    .header-link {
+      color: rgba(255,255,255,.65); text-decoration: none; font-size: .85rem;
+      transition: color .2s;
+    }
+    .header-link:hover { color: var(--white); }
+
+    .btn-line {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 9px 20px; background: var(--line-green); color: var(--white);
+      text-decoration: none; font-weight: 700; font-size: .85rem;
+      border-radius: 50px; transition: background .2s, transform .15s;
+    }
+    .btn-line:hover { background: var(--line-hover); transform: translateY(-1px); }
+    .btn-line svg { width: 18px; height: 18px; fill: currentColor; }
+
+    /* ─── Hero ─── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      padding: 72px 0 56px; color: var(--white); position: relative; overflow: hidden;
+    }
+    .hero::after {
+      content: ''; position: absolute; right: -100px; top: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(201,160,142,.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero .container {
+      position: relative; z-index: 1;
+      display: flex; align-items: center; gap: 48px;
+    }
+    .hero-content { flex: 1; }
+    .hero h1 { font-size: 2.6rem; font-weight: 900; line-height: 1.35; margin-bottom: 16px; }
+    .hero-sub {
+      font-size: 1.15rem; color: rgba(255,255,255,.75); margin-bottom: 36px; line-height: 1.7;
+    }
+    .btn-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 16px 36px; background: var(--line-green); color: var(--white);
+      text-decoration: none; font-weight: 700; font-size: 1.05rem;
+      border-radius: 50px; box-shadow: 0 4px 20px rgba(6,199,85,.3);
+      transition: background .2s, transform .15s, box-shadow .2s;
+    }
+    .btn-cta:hover { background: var(--line-hover); transform: translateY(-2px); box-shadow: 0 6px 28px rgba(6,199,85,.35); }
+    .btn-cta svg { width: 20px; height: 20px; fill: currentColor; }
+
+    /* Phone mockup */
+    .hero-phone {
+      flex-shrink: 0; width: 260px;
+      filter: drop-shadow(0 24px 48px rgba(0,0,0,.3));
+    }
+    .hero-phone img { width: 100%; height: auto; }
+
+    /* ─── Loan Slider ─── */
+    .loan-slider-section {
+      background: var(--copper-bg); padding: 64px 0;
+    }
+    .loan-slider-section .section-header h2 { color: var(--navy); }
+    .loan-slider-section .section-header p { color: var(--text-mid); }
+
+    .slider-box {
+      max-width: 600px; margin: 0 auto;
+      background: rgba(255,255,255,.92); border-radius: var(--radius-lg);
+      padding: 36px 40px 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,.08);
+    }
+    .slider-condition {
+      display: inline-block; padding: 8px 24px;
+      background: var(--off-white); border: 1px solid var(--border); border-radius: 50px;
+      font-size: .9rem; font-weight: 600; color: var(--navy);
+      margin-bottom: 28px;
+    }
+    .slider-label { font-size: .85rem; font-weight: 600; color: var(--text-mid); margin-bottom: 4px; }
+    .slider-amount {
+      font-size: 3.2rem; font-weight: 900; color: var(--navy); line-height: 1.2; margin-bottom: 12px;
+    }
+
+    .slider-track { position: relative; margin-bottom: 8px; }
+    input[type="range"] {
+      -webkit-appearance: none; appearance: none;
+      width: 100%; height: 6px; border-radius: 3px;
+      background: linear-gradient(to right, var(--copper) 0%, var(--copper) var(--fill, 0%), #E0D5CC var(--fill, 0%), #E0D5CC 100%);
+      outline: none; cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--white); border: 3px solid var(--orange);
+      box-shadow: 0 2px 8px rgba(0,0,0,.15); cursor: pointer;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--white); border: 3px solid var(--orange);
+      box-shadow: 0 2px 8px rgba(0,0,0,.15); cursor: pointer;
+    }
+
+    .slider-range {
+      display: flex; justify-content: space-between;
+      font-size: .75rem; color: var(--text-light); margin-bottom: 28px;
+    }
+
+    .slider-results { border-top: 1px solid var(--border); padding-top: 20px; }
+    .slider-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 6px 0;
+    }
+    .slider-row-label { font-size: .9rem; color: var(--text-mid); }
+    .slider-row-value { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+    .slider-row-note { font-size: .75rem; color: var(--text-light); margin-left: 4px; font-weight: 400; }
+
+    .slider-footer {
+      text-align: center; margin-top: 24px;
+    }
+    .slider-footer .btn-line-sm {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 28px; background: var(--line-green); color: var(--white);
+      text-decoration: none; font-weight: 700; font-size: .9rem;
+      border-radius: 50px; transition: background .2s, transform .15s;
+    }
+    .slider-footer .btn-line-sm:hover { background: var(--line-hover); transform: translateY(-1px); }
+    .slider-footer .btn-line-sm svg { width: 18px; height: 18px; fill: currentColor; }
+    .slider-disclaimer {
+      font-size: .72rem; color: var(--text-light); margin-top: 12px;
+    }
+
+    .section-cta {
+      text-align: center; margin-top: 36px;
+    }
+    .section-cta .btn-line {
+      padding: 12px 28px; font-size: .9rem;
+    }
+
+    .info-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--copper); color: var(--white);
+      font-size: .7rem; font-weight: 700; text-decoration: none;
+      margin-right: 6px; flex-shrink: 0;
+      transition: background .2s;
+    }
+    .info-icon:hover { background: var(--copper-dark); }
+
+    /* ─── Section shared ─── */
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header h2 { font-size: 2rem; font-weight: 900; color: var(--navy); margin-bottom: 8px; }
+    .section-header p { font-size: 1rem; color: var(--text-mid); }
+
+    /* ─── Process ─── */
+    .process { padding: 72px 0; background: var(--white); }
+    .process-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    }
+    .process-step { text-align: center; position: relative; }
+    .process-number {
+      width: 52px; height: 52px; background: var(--navy); color: var(--white);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1.2rem; margin: 0 auto 16px;
+    }
+    .process-step h3 { font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .process-step p { font-size: .9rem; color: var(--text-mid); line-height: 1.6; }
+    .process-time {
+      display: inline-block; margin-top: 10px; padding: 4px 14px;
+      background: rgba(232,115,74,.1); color: var(--orange);
+      font-size: .78rem; font-weight: 600; border-radius: 50px;
+    }
+    .process-arrow {
+      position: absolute; top: 26px; right: -20px;
+      font-size: 1.4rem; color: var(--copper);
+    }
+
+    /* ─── Trust Badges ─── */
+    .trust { padding: 72px 0; background: var(--off-white); }
+    .trust-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .trust-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 12px 22px; border: 2px solid var(--orange); border-radius: 50px;
+      font-size: .9rem; font-weight: 600; color: var(--navy); background: var(--white);
+      transition: background .2s;
+    }
+    .trust-badge:hover { background: rgba(232,115,74,.04); }
+    .trust-badge .num { color: var(--orange); font-weight: 700; }
+
+    /* ─── Services ─── */
+    .services { padding: 72px 0; background: var(--white); }
+    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .service-card {
+      background: var(--off-white); border-radius: var(--radius-lg);
+      padding: 32px 20px; text-align: center;
+      border: 1px solid var(--border);
+      transition: box-shadow .3s, transform .3s;
+    }
+    .service-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.06); transform: translateY(-4px); }
+    .service-icon {
+      width: 56px; height: 56px; margin: 0 auto 14px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .service-icon svg {
+      width: 40px; height: 40px;
+      stroke: var(--copper-dark); fill: none;
+      stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); }
+
+    /* ─── Testimonials ─── */
+    .testimonials { padding: 72px 0; background: var(--off-white); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .testimonial-card {
+      padding: 28px; background: var(--white); border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+    }
+    .testimonial-stars { color: var(--orange); font-size: .9rem; margin-bottom: 12px; letter-spacing: 2px; }
+    .testimonial-quote { font-size: .92rem; color: var(--text-dark); line-height: 1.8; margin-bottom: 16px; }
+    .testimonial-author { font-size: .8rem; color: var(--text-light); font-weight: 500; }
+
+    /* ─── CTA Banner ─── */
+    .cta-banner {
+      padding: 80px 0; text-align: center;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+    }
+    .cta-banner h2 { font-size: 2rem; font-weight: 900; margin-bottom: 10px; }
+    .cta-banner p { font-size: 1rem; color: rgba(255,255,255,.7); margin-bottom: 32px; }
+
+    /* ─── Footer ─── */
+    .footer { background: var(--navy-dark); color: rgba(255,255,255,.6); padding: 40px 0 32px; }
+    .footer-main {
+      text-align: center; margin-bottom: 16px;
+    }
+    .footer-brand {
+      display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px;
+    }
+    .footer-brand img { height: 36px; border-radius: 6px; }
+    .footer-brand-name { color: var(--white); font-weight: 700; font-size: .95rem; }
+    .footer-info { font-size: .8rem; line-height: 2; }
+    .footer-info a { color: rgba(255,255,255,.7); text-decoration: none; }
+    .footer-info a:hover { color: var(--white); }
+    .footer-site-link {
+      text-align: right; margin-top: 16px;
+    }
+    .footer-site-link a {
+      color: var(--copper); text-decoration: none;
+      font-size: .85rem; font-weight: 600;
+    }
+    .footer-site-link a:hover { text-decoration: underline; }
+    .footer-legal {
+      margin-top: 24px; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      font-size: .72rem; text-align: center; line-height: 1.8;
+      color: rgba(255,255,255,.35);
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .hero .container { flex-direction: column; text-align: center; }
+      .hero-content { text-align: center; }
+      .hero-phone { width: 200px; margin: 0 auto; }
+      .loan-slider-section { padding: 48px 0; }
+      .slider-box { padding: 28px 24px 24px; }
+      .slider-amount { font-size: 2.4rem; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 48px 0 40px; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero-sub { font-size: .95rem; }
+      .section-header h2 { font-size: 1.5rem; }
+      .process-grid { grid-template-columns: 1fr; gap: 24px; }
+      .process-arrow { display: none; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .trust-badges { gap: 8px; }
+      .trust-badge { font-size: .8rem; padding: 10px 16px; }
+      .services-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .service-card { padding: 24px 14px; }
+      .header-link { display: none; }
+      .container { padding: 0 16px; }
+      .footer-site-link { text-align: center; }
+      .cta-banner h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-left">
+        <a href="#" class="header-logo">
+          <img src="logo.png" alt="雙城投顧">
+          <span class="header-logo-text">雙城投顧</span>
+        </a>
+        <a href="https://www.thecoinscompany.com/" class="header-link" target="_blank" rel="noopener">前往官網</a>
+      </div>
+      <a href="https://thecoinscompany.com/line" class="btn-line" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.65 1.33 5.02 3.42 6.59-.13.45-.83 2.91-.86 3.09 0 0-.02.13.05.18.07.06.16.03.16.03.22-.03 2.5-1.65 3.54-2.42.54.08 1.1.13 1.69.13 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+        LINE 諮詢
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>讓人放心的小額借貸公司<br>已創立 15 年</h1>
+        <p class="hero-sub">全程線上申辦，借五萬月息 666 元，快速完成評估</p>
+        <a href="https://thecoinscompany.com/line" class="btn-cta" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.65 1.33 5.02 3.42 6.59-.13.45-.83 2.91-.86 3.09 0 0-.02.13.05.18.07.06.16.03.16.03.22-.03 2.5-1.65 3.54-2.42.54.08 1.1.13 1.69.13 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+          加入 LINE 立即諮詢
+        </a>
+      </div>
+
+      <div class="hero-phone">
+        <img src="homepage.svg" alt="雙城投顧 APP 介面">
+      </div>
+    </div>
+  </section>
+
+  <!-- Loan Slider -->
+  <section class="loan-slider-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>借款條件與金額</h2>
+        <p>清楚揭露每一筆費用，拖拉金額即可試算</p>
+      </div>
+      <div class="slider-box">
+        <div style="text-align:center; margin-bottom: 24px;">
+          <span class="slider-condition">還款期數最長 12–15 期，需有勞保</span>
+        </div>
+        <div class="slider-label">借款金額</div>
+        <div class="slider-amount" id="displayAmount">50,000</div>
+        <div class="slider-track">
+          <input type="range" id="loanSlider" min="20000" max="150000" step="10000" value="50000">
+        </div>
+        <div class="slider-range">
+          <span>20,000</span>
+          <span>150,000</span>
+        </div>
+        <div class="slider-results">
+          <div class="slider-row">
+            <span class="slider-row-label">月息</span>
+            <span class="slider-row-value"><span id="displayInterest">666</span> 元<span class="slider-row-note">（按週年計算）</span></span>
+          </div>
+          <div class="slider-row">
+            <span class="slider-row-label"><a href="https://www.thecoinscompany.com/loancalc/" target="_blank" rel="noopener" class="info-icon">?</a>月繳金額</span>
+            <span class="slider-row-value"><span id="displayMonthly">4,833</span> 元</span>
+          </div>
+          <div class="slider-row">
+            <span class="slider-row-label"><a href="https://www.thecoinscompany.com/loancalc/" target="_blank" rel="noopener" class="info-icon">?</a>帳管費</span>
+            <span class="slider-row-value">1,200 元起</span>
+          </div>
+        </div>
+        <div class="slider-footer">
+          <a href="https://thecoinscompany.com/line" class="btn-line-sm" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.65 1.33 5.02 3.42 6.59-.13.45-.83 2.91-.86 3.09 0 0-.02.13.05.18.07.06.16.03.16.03.22-.03 2.5-1.65 3.54-2.42.54.08 1.1.13 1.69.13 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+            詢問借款
+          </a>
+          <div class="slider-disclaimer">※ 年利率 15.98%，以上金額僅供參考，實際費率依個人條件審核為準</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process">
+    <div class="container">
+      <div class="section-header">
+        <h2>申請流程</h2>
+        <p>三步驟完成，全程線上</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <h3>下載 APP</h3>
+          <p>透過 APP 填寫基本資料<br>及上傳文件</p>
+          <span class="process-time">平均時間 9 分鐘</span>
+          <span class="process-arrow">›</span>
+        </div>
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h3>電話照會</h3>
+          <p>專人電話與您確認<br>相關資料</p>
+          <span class="process-time">平均時間 9 分鐘</span>
+          <span class="process-arrow">›</span>
+        </div>
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h3>簽約完成</h3>
+          <p>至本公司或約定地點<br>專人簽約服務</p>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a href="https://thecoinscompany.com/line" class="btn-line" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.65 1.33 5.02 3.42 6.59-.13.45-.83 2.91-.86 3.09 0 0-.02.13.05.18.07.06.16.03.16.03.22-.03 2.5-1.65 3.54-2.42.54.08 1.1.13 1.69.13 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+          LINE 諮詢
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="trust">
+    <div class="container">
+      <div class="section-header">
+        <h2>選擇雙城投顧</h2>
+        <p>領先業界的金融服務</p>
+      </div>
+      <div class="trust-badges">
+        <div class="trust-badge">公平契約保障，維護客戶權益</div>
+        <div class="trust-badge">放款平均 <span class="num">1–2</span> 個工作天</div>
+        <div class="trust-badge">每年服務資金達 <span class="num">3.5</span> 億</div>
+        <div class="trust-badge">經濟部營登許可</div>
+        <div class="trust-badge">利息與收費透明</div>
+        <div class="trust-badge">營運時間已達 <span class="num">15</span> 年</div>
+        <div class="trust-badge">已為全國超過 <span class="num">3</span> 萬人服務</div>
+        <div class="trust-badge">法務親自簽約</div>
+      </div>
+      <div class="section-cta">
+        <a href="https://thecoinscompany.com/line" class="btn-line" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.65 1.33 5.02 3.42 6.59-.13.45-.83 2.91-.86 3.09 0 0-.02.13.05.18.07.06.16.03.16.03.22-.03 2.5-1.65 3.54-2.42.54.08 1.1.13 1.69.13 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+          LINE 諮詢
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>服務項目</h2>
+        <p>多元方案，滿足不同資金需求</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <!-- coin / money circle icon -->
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20"/><line x1="24" y1="14" x2="24" y2="34"/><path d="M30 19H21a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H18"/></svg>
+          </div>
+          <h3>生活週轉</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <!-- graduation cap icon -->
+            <svg viewBox="0 0 48 48"><path d="M24 6L4 18l20 12 20-12L24 6z"/><path d="M36 24v12c0 0-5 6-12 6s-12-6-12-6V24"/><line x1="44" y1="18" x2="44" y2="34"/></svg>
+          </div>
+          <h3>子女教育</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <!-- credit card icon -->
+            <svg viewBox="0 0 48 48"><rect x="4" y="10" width="40" height="28" rx="4" ry="4"/><line x1="4" y1="20" x2="44" y2="20"/><line x1="12" y1="28" x2="24" y2="28"/></svg>
+          </div>
+          <h3>帳務規劃</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <!-- chart / planning icon -->
+            <svg viewBox="0 0 48 48"><rect x="6" y="6" width="36" height="36" rx="4" ry="4"/><polyline points="14 30 22 22 28 28 36 18"/><circle cx="36" cy="18" r="2"/></svg>
+          </div>
+          <h3>財務規劃</h3>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a href="https://thecoinscompany.com/line" class="btn-line" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.65 1.33 5.02 3.42 6.59-.13.45-.83 2.91-.86 3.09 0 0-.02.13.05.18.07.06.16.03.16.03.22-.03 2.5-1.65 3.54-2.42.54.08 1.1.13 1.69.13 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+          LINE 諮詢
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>客戶真實回饋</h2>
+        <p>每一則好評，都是我們繼續努力的動力</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">服務流程很順暢，線上就能完成，不用特地請假跑來跑去。利率也很清楚，合約上寫什麼就是什麼，讓人很安心。</p>
+          <p class="testimonial-author">── 陳小姐，合作 3 年</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">朋友推薦的，一開始有點擔心，但客服很有耐心地解釋每個步驟。合作到現在兩年多，每次都很順利。</p>
+          <p class="testimonial-author">── 林先生，合作 2 年</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <h2>有任何問題，歡迎聊聊</h2>
+    <p>加入 LINE 官方帳號，由專人為您服務</p>
+    <a href="https://thecoinscompany.com/line" class="btn-cta" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.65 1.33 5.02 3.42 6.59-.13.45-.83 2.91-.86 3.09 0 0-.02.13.05.18.07.06.16.03.16.03.22-.03 2.5-1.65 3.54-2.42.54.08 1.1.13 1.69.13 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+      加入 LINE 立即諮詢
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img src="logo.png" alt="雙城投顧">
+          <span class="footer-brand-name">雙城投資顧問有限公司</span>
+        </div>
+        <div class="footer-info">
+          客服電話：<a href="tel:04-22368929">04-22368929</a>　｜　免付費：<a href="tel:0809-059-059">0809-059-059</a><br>
+          LINE ID：@coins<br>
+          地址：台中市南屯區公益路二段51號20樓<br>
+          信箱：<a href="mailto:teams@thecoinscompany.com">teams@thecoinscompany.com</a><br>
+          統一編號：53603070
+        </div>
+      </div>
+      <div class="footer-site-link">
+        <a href="https://www.thecoinscompany.com/" target="_blank" rel="noopener">前往官方網站 →</a>
+      </div>
+      <div class="footer-legal">
+        實際諮詢與規劃內容，將依個別情況與最終確認服務內容為準。<br>
+        借貸有風險，申辦前請詳閱合約條款。<br>
+        &copy; 2011–2026 雙城投資顧問有限公司 The Coins Company. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const slider = document.getElementById('loanSlider');
+    const displayAmount = document.getElementById('displayAmount');
+    const displayInterest = document.getElementById('displayInterest');
+    const displayMonthly = document.getElementById('displayMonthly');
+
+    function fmt(n) {
+      return n.toLocaleString('en-US');
+    }
+
+    function update() {
+      const amount = parseInt(slider.value, 10);
+      const interest = Math.round(amount * 0.1598 / 12);
+      const monthly = Math.round(amount * 1.1598 / 12);
+      const pct = (amount - 20000) / (150000 - 20000) * 100;
+
+      slider.style.setProperty('--fill', pct + '%');
+      displayAmount.textContent = fmt(amount);
+      displayInterest.textContent = fmt(interest);
+      displayMonthly.textContent = fmt(monthly);
+    }
+
+    slider.addEventListener('input', update);
+    update();
+  </script>
+
+</body>
+</html>
